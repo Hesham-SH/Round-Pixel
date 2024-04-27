@@ -35,7 +35,11 @@ Benefits of using CQRS pattern include higher scalability, simplified code maint
 
 -Reference : (https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si)
 
+### Design Patterns 
+- Mediator Design Pattern With CQRS
+Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
 
+-Reference : ([https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si](https://refactoring.guru/design-patterns/mediator/csharp/example))
 
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
