@@ -4,18 +4,18 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 
 ## Key Requirements
 
-### A basic login and registration with user roles (Admin and Customer).
-### Only registered users can make orders
-### Admin should set the currency exchange rate for each currency available, and the system will save it in the Redis cache, the expiration time of Redis should defined in the configuration file.
-### The basic currency should be defined in the configuration file.
-### Admin has full control on the items.
-### The Discount Promo Code and Discount Value should defined in the configuration file, if the customer sends the Discount Promo Code, the discount should be applied to the order.
-### List of available items as the user can review items select needs and add to cart.
-### Calculate the detailed and total value considering the currency exchange and discount.
-### The create order with details should be one API.
-### The customer can get his orders after login.
-### The admin can close the orders.
-### Use the setup data tables for the definition of orders (Items, Customer, and UOM) with a browser for every table to view and search.
+### 1- A basic login and registration with user roles (Admin and Customer).
+### 2- Only registered users can make orders
+### 3- Admin should set the currency exchange rate for each currency available, and the system will save it in the Redis cache, the expiration time of Redis should defined in the configuration file.
+### 4- The basic currency should be defined in the configuration file.
+### 5- Admin has full control on the items.
+### 6- The Discount Promo Code and Discount Value should defined in the configuration file, if the customer sends the Discount Promo Code, the discount should be applied to the order.
+### 7- List of available items as the user can review items select needs and add to cart.
+### 8- Calculate the detailed and total value considering the currency exchange and discount.
+### 9- The create order with details should be one API.
+### 10- The customer can get his orders after login.
+### 11- The admin can close the orders.
+### 12- Use the setup data tables for the definition of orders (Items, Customer, and UOM) with a browser for every table to view and search.
 
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
