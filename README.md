@@ -46,7 +46,8 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 - Reference : https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-8.0
 
 ### Extra Milestones (To be considered in the future)
-- Background Jobs using .NET built Hosted Service Or Hangfire (External Package)
+- Background Jobs using .NET Hosted Service Or Hangfire (External Package)
+- Advantage : Use it to set the currency in Redis Caching Layer instead of doing it manually.
 - Definition : Background jobs, also known as asynchronous tasks or jobs, are a common technique in software development for handling tasks that can be executed independently of the main   user interaction or request-response cycle. These tasks are typically performed in the "background," separate from the immediate user experience.
 - Reference : https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio , https://www.youtube.com/watch?v=cvpSx10z5Og&ab_channel=MohamadLawand
 ## Technologies Used
