@@ -20,9 +20,22 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 ## Key Notes And Facilities
 ### External Packages Used
 - AutoMapper
-- Json Web Token
+- JSON Web Token
 - MediatR
 - Redis
+
+### Architecture Pattern Implemented
+- CQRS => Command Query Responsibilty Segregation
+
+CQRS (Command Query Responsibility Segregation) Pattern is a design pattern for segregating different responsibility types in a software application. The basic idea behind CQRS is to split an application’s operations into two groups:
+
+Commands, which are responsible for changing the state of the application
+Queries, which retrieve data without changing any state
+Benefits of using CQRS pattern include higher scalability, simplified code maintenance, and reduced code complexity. It also allows for targeting the specific needs of the system and helps to resolve inconsistencies commonly seen in traditional CRUD architectures.
+
+-Reference : (https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si)
+
+
 
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
