@@ -32,17 +32,18 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
   Commands, which are responsible for changing the state of the application
   Queries, which retrieve data without changing any state. Benefits of using CQRS pattern include higher scalability, simplified code maintenance, and reduced code complexity. It also      allows for targeting the specific needs of the system and helps to resolve inconsistencies commonly seen in traditional CRUD architectures.
 
--Reference : (https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si)
+-Reference : https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si
 
 ### Design Patterns 
 - Mediator Design Pattern With CQRS
 - Definition : Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
 
--Reference : ([https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si](https://refactoring.guru/design-patterns/mediator/csharp/example))
+-Reference : https://refactoring.guru/design-patterns/mediator/csharp/example
 
 ### Bonus Milestones
 - Rate Limiter : Implemented Rate Limiter Service as a middlware
 - Definition : Rate limiting is a technique to limit network traffic to prevent users from exhausting system resources. Rate limiting makes it harder for malicious actors to overburden                  the system and cause attacks like Denial of Service (DoS). This involves attackers flooding a target system with requests and consuming too much network capacity,                         storage, and memory.
+- Reference : https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-8.0
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 - ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
