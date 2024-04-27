@@ -41,6 +41,9 @@ Benefits of using CQRS pattern include higher scalability, simplified code maint
 
 -Reference : ([https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si](https://refactoring.guru/design-patterns/mediator/csharp/example))
 
+### Bonus Milestones
+- Rate Limiter : Implemented Rate Limiter Service as a middlware
+- Definition : Rate limiting is a technique to limit network traffic to prevent users from exhausting system resources. Rate limiting makes it harder for malicious actors to overburden                  the system and cause attacks like Denial of Service (DoS). This involves attackers flooding a target system with requests and consuming too much network capacity,                         storage, and memory.
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 - ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
