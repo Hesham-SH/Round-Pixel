@@ -1,6 +1,6 @@
-# E-Commerce Project
+# Online Shopping App
 
-Welcome to our E-Commerce project! This application is designed to provide a seamless and secure online shopping experience. Below, you'll find information about the key features and technologies used on the server side.
+Welcome to our Online Shopping App ! This application is designed to provide a seamless and secure online shopping experience. Below, you'll find information about the key features and technologies used on the server side.
 
 ## Key Requirements
 
