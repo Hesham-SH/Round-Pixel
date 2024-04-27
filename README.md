@@ -17,6 +17,13 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 ### 11- The admin can close the orders.
 ### 12- Use the setup data tables for the definition of orders (Items, Customer, and UOM) with a browser for every table to view and search.
 
+## Key Notes And Facilities
+### External Packages Used
+- AutoMapper
+- Json Web Token
+- MediatR
+- Redis
+
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 - ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
@@ -27,7 +34,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 - ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 - ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 - ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-- ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+
 
 ## Getting Started
 1. **Clone the repository:**
@@ -42,9 +49,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
    - ```cd API```
 
 3. **Run migrations to set up the database:**
-   - Execute the following command to run migrations and set up the database:
-   - Run this command:
-   - ```dotnet ef database update```
+   - No Need To Update Database Manually , A Service is registered in the application pipeline which ensures that database is updated to the latest migration file.
 
 3. **Start the API:**
    - Open your terminal or command prompt and navigate to the "API" directory of the project.
