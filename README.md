@@ -27,7 +27,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 ### Architecture Pattern Implemented
 - CQRS => Command Query Responsibilty Segregation
 
-CQRS (Command Query Responsibility Segregation) Pattern is a design pattern for segregating different responsibility types in a software application. The basic idea behind CQRS is to split an application’s operations into two groups:
+- Definition : CQRS (Command Query Responsibility Segregation) Pattern is a design pattern for segregating different responsibility types in a software application. The basic idea behind CQRS is to split an application’s operations into two groups:
 
 Commands, which are responsible for changing the state of the application
 Queries, which retrieve data without changing any state
@@ -37,7 +37,7 @@ Benefits of using CQRS pattern include higher scalability, simplified code maint
 
 ### Design Patterns 
 - Mediator Design Pattern With CQRS
-Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
+- Definition : Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
 
 -Reference : ([https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si](https://refactoring.guru/design-patterns/mediator/csharp/example))
 
