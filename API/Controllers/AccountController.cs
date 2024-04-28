@@ -12,16 +12,14 @@ namespace API.Controllers;
 
 [EnableRateLimiting("FixedWindowPolicy")]
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AccountController : ControllerBase
 {
     private readonly UserManager<AppUser> _userManager;
      private readonly TokenService _tokenService;
-        private readonly RoleManager<IdentityRole> _roleManager;
-    public AccountController(UserManager<AppUser> userManager, TokenService tokenService, RoleManager<IdentityRole> roleManager)
+    public AccountController(UserManager<AppUser> userManager, TokenService tokenService)
     {
         _userManager = userManager;
-        _roleManager = roleManager;
         _tokenService = tokenService;
     }
 

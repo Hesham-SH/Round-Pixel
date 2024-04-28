@@ -34,7 +34,7 @@ public static class ApplicationServiceExtensions
         {
             opt.AddPolicy("CorsPolicy", policy =>
             {
-                policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("");
+                policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:5273");
             });
         });
 
@@ -54,6 +54,7 @@ public static class ApplicationServiceExtensions
         services.AddScoped<IItemsService, ItemsService>();
         services.AddScoped<IOrderService, OrderService>();
         services.AddScoped<ICachingService, CachingService>();
+        services.AddScoped<ICurrencyService, CurrencyService>();
         services.Configure<BasicCurrency>(configuration.GetSection("BasicCurrency"));
         services.Configure<Discount>(configuration.GetSection("Discount"));
         services.Configure<RedisConfig>(configuration.GetSection("RedisConfig"));

@@ -50,7 +50,7 @@ public class CurrencyController : BaseApiController
         return Ok("Currency Added Successfully");
     }
 
-    [HttpGet("GetCurrencyByCode/{code:string}")]
+    [HttpGet("GetCurrencyByCode/{code}")]
     public async Task<ActionResult<Currency>> GetCurrencyByCode(string code)
     {
         var result = await _currencyService.GetByCodeAsync(code);

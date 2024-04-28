@@ -15,7 +15,5 @@ public class MappingProfiles : Profile
         CreateMap<Order, OrderDTO>()
         .ForMember(d => d.CustomerName, o => o.MapFrom(s => s.Customer.CustomerName));
 
-        CreateMap<OrderDetails, OrderDetailsDTO>()
-        .ForMember(d => d.ItemName, o => o.MapFrom(s => s.Item.ItemName));
     }
 }

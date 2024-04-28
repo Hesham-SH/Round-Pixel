@@ -24,14 +24,14 @@ public class OrderController : BaseApiController
     }
 
     [Authorize(Policy = "RequireUserRole")]
-    [HttpGet("GetOrdersByUserId/{userId:Guid")]
+    [HttpGet("GetOrdersByUserId/userId")]
     public async Task<ActionResult<List<OrderDTO>>> GetOrdersByUserId(Guid userId)
     {
         return await _orderService.GetOrdersByUserIdAsync(userId);
     }
 
     [Authorize(Policy = "RequireUserRole")]
-    [HttpGet("GetOrderDetailsByOrderId/{orderId:Guid}")]
+    [HttpGet("GetOrderDetailsByOrderId/orderId")]
     public async Task<ActionResult<List<OrderDetailsDTO>>> GetOrderDetailsByOrderId(Guid orderId)
     {
         return await _orderService.GetOrderDetailsByOrderIdAsync(orderId);
