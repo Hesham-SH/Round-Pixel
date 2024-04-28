@@ -8,11 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers(opt =>
-{
-    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-    opt.Filters.Add(new AuthorizeFilter(policy));
-});
+builder.Services.AddControllers();
 
 builder.Services.AddApplicationServices(builder.Configuration);
 
@@ -31,11 +27,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseRateLimiter();
 
-app.UseHttpsRedirection();
-
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseHttpsRedirection();
 
 app.MapControllers();
 

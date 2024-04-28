@@ -1,8 +1,10 @@
 using System.Text;
 using API.Services;
 using Domain;
+using Domain.Interceptors;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
 
@@ -13,7 +15,18 @@ public static class IdentityServiceExtensions
     public static IServiceCollection AddIdentityServices(this IServiceCollection services, 
     IConfiguration configuration)
     {
-        services.AddIdentity<AppUser, IdentityRole>(opt => 
+        services.AddLogging();
+        var serviceProvider = services.BuildServiceProvider();
+        var logger = serviceProvider.GetRequiredService<ILogger<SoftDelete>>();
+
+        //Main Database (SQL Server) Connection
+        services.AddDbContext<ApplicationDatabaseContext>(options => 
+        {
+            options.UseSqlServer(configuration.GetConnectionString("MainDatabaseConnection")).
+            AddInterceptors(new SoftDelete(logger));
+        });
+        
+        services.AddIdentity<AppUser,IdentityRole>(opt => 
         {
             opt.Password.RequireNonAlphanumeric = false;
             opt.User.RequireUniqueEmail = true;

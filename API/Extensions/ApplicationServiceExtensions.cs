@@ -19,16 +19,16 @@ public static class ApplicationServiceExtensions
         services.AddSwaggerGen();
 
         //Creating Service of Logger
-        services.AddLogging();
-        var serviceProvider = services.BuildServiceProvider();
-        var logger = serviceProvider.GetRequiredService<ILogger<SoftDelete>>();
+        // services.AddLogging();
+        // var serviceProvider = services.BuildServiceProvider();
+        // var logger = serviceProvider.GetRequiredService<ILogger<SoftDelete>>();
 
-        //Main Database (SQL Server) Connection
-        services.AddDbContext<ApplicationDatabaseContext>(options => 
-        {
-            options.UseSqlServer(configuration.GetConnectionString("MainDatabaseConnection")).
-            AddInterceptors(new SoftDelete(logger));
-        });
+        // //Main Database (SQL Server) Connection
+        // services.AddDbContext<ApplicationDatabaseContext>(options => 
+        // {
+        //     options.UseSqlServer(configuration.GetConnectionString("MainDatabaseConnection")).
+        //     AddInterceptors(new SoftDelete(logger));
+        // });
 
         services.AddCors(opt => 
         {

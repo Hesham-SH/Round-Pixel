@@ -1,3 +1,4 @@
+using API.DTOs;
 using Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -20,8 +21,8 @@ public class RoleController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var roles =  await _roleManager.Roles.ToListAsync();
-        if (roles?.Count > 0)
+        var roles =  await _roleManager.Roles.Select(r => new RoleDTO { Id = r.Id, Name = r.Name }).ToListAsync();
+        if (roles.Count > 0)
             return Ok(roles);
 
         return NotFound("No Roles Found");

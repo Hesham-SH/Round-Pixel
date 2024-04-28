@@ -16,11 +16,13 @@ namespace API.Controllers;
 public class AccountController : ControllerBase
 {
     private readonly UserManager<AppUser> _userManager;
-     private readonly TokenService _tokenService;
-    public AccountController(UserManager<AppUser> userManager, TokenService tokenService)
+    private readonly TokenService _tokenService;
+    private readonly RoleManager<IdentityRole> _roleManager;
+    public AccountController(UserManager<AppUser> userManager, TokenService tokenService, RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _tokenService = tokenService;
+        _roleManager = roleManager;
     }
 
     [Authorize(Policy = "RequireAdminRole")]
@@ -88,8 +90,11 @@ public class AccountController : ControllerBase
         {
             return CreateUserObject(user, userRoles);
         }
-
-        return BadRequest(result.Errors);
+        else
+        {
+            return BadRequest(result.Errors);
+        }
+        
     }
 
 
