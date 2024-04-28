@@ -1,6 +1,6 @@
-# E-Commerce Project
+# Online Shopping App
 
-Welcome to our E-Commerce project! This application is designed to provide a seamless and secure online shopping experience. Below, you'll find information about the key features and technologies used on the server side.
+Welcome to our Online Shopping App ! This application is designed to provide a seamless and secure online shopping experience. Below, you'll find information about the key features and technologies used on the server side.
 
 ## Key Requirements
 
@@ -17,6 +17,39 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 ### 11- The admin can close the orders.
 ### 12- Use the setup data tables for the definition of orders (Items, Customer, and UOM) with a browser for every table to view and search.
 
+## Key Notes And Facilities
+### External Packages Used
+- AutoMapper
+- JSON Web Token
+- MediatR
+- Redis
+
+### Architecture Pattern Implemented
+- CQRS => Command Query Responsibilty Segregation
+
+- Definition : CQRS (Command Query Responsibility Segregation) Pattern is a design pattern for segregating different responsibility types in a software application. The basic idea behind   CQRS is to split an application’s operations into two groups:
+
+  Commands, which are responsible for changing the state of the application
+  Queries, which retrieve data without changing any state. Benefits of using CQRS pattern include higher scalability, simplified code maintenance, and reduced code complexity. It also      allows for targeting the specific needs of the system and helps to resolve inconsistencies commonly seen in traditional CRUD architectures.
+
+-Reference : https://www.codeproject.com/Articles/5377617/CQRS-Pattern-in-Csharp-and-Clean-Architecture-A-Si
+
+### Design Patterns 
+- Mediator Design Pattern With CQRS
+- Definition : Mediator is a behavioral design pattern that reduces coupling between components of a program by making them communicate indirectly, through a special mediator object.
+
+-Reference : https://refactoring.guru/design-patterns/mediator/csharp/example
+
+### Bonus Milestones
+- Rate Limiter : Implemented Rate Limiter Service as a middlware
+- Definition : Rate limiting is a technique to limit network traffic to prevent users from exhausting system resources. Rate limiting makes it harder for malicious actors to overburden                  the system and cause attacks like Denial of Service (DoS). This involves attackers flooding a target system with requests and consuming too much network capacity,                         storage, and memory.
+- Reference : https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-8.0
+
+### Extra Milestones (To be considered in the future)
+- Background Jobs using .NET Hosted Service Or Hangfire (External Package)
+- Advantage : Use it to set the currency in Redis Caching Layer instead of doing it manually.
+- Definition : Background jobs, also known as asynchronous tasks or jobs, are a common technique in software development for handling tasks that can be executed independently of the main   user interaction or request-response cycle. These tasks are typically performed in the "background," separate from the immediate user experience.
+- Reference : https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-8.0&tabs=visual-studio , https://www.youtube.com/watch?v=cvpSx10z5Og&ab_channel=MohamadLawand
 ## Technologies Used
 - ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 - ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
@@ -27,7 +60,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
 - ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 - ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 - ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-- ![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+
 
 ## Getting Started
 1. **Clone the repository:**
@@ -42,9 +75,7 @@ Welcome to our E-Commerce project! This application is designed to provide a sea
    - ```cd API```
 
 3. **Run migrations to set up the database:**
-   - Execute the following command to run migrations and set up the database:
-   - Run this command:
-   - ```dotnet ef database update```
+   - No Need To Update Database Manually , A Service is registered in the application pipeline which ensures that database is updated to the latest migration file.
 
 3. **Start the API:**
    - Open your terminal or command prompt and navigate to the "API" directory of the project.
